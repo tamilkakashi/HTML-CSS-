@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Laptop Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="properties/style/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to right, #ffa4a4, #ffd000);
+}
+
+header {
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Center the container and products */
+.container {
+    display: flex;
+    justify-content: center; /* Centers the container horizontally */
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Center the products */
+main {
+    display: flex;
+    flex-direction: column; /* Arrange products vertically */
+    align-items: center; /* Centers products in the main section */
+    width: 100%;
+    max-width: 800px; /* Limit width for better centering on large screens */
+}
+
+footer {
+    background: linear-gradient(to right, #81C784, #4CAF50);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Styling for each product */
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+    width: 100%; /* Full width within the max-width constraint */
+    max-width: 500px; /* Optional limit to make each product appear centered */
+}
+
+.product img {
+    width: 100%; /* Adjust width of image */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers the image within the product box */
+}
+
+.product h3 {
+    color: #4CAF50; /* Heading color */
+    margin: 10px 0;
+}
+
+.product p {
+    margin: 5px 0;
+}
+    </style>
+    <div class="container">
+        <!-- Main Content Area -->
+        <main>
+            <h2>Featured Products</h2>
+            <div class="product">
+                <img src="p5.avif" alt="Laptop 5">
+                <h3>Lenovo ThinkPad X1 Carbon</h3>
+                <p>Price: ₹1,54,761</p>
+                <p>Durable and powerful, ideal for business professionals.</p>
+                <button class="btn btn-success" onclick="addToCart('Lenovo ThinkPad X1 Carbon')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="buyNow('Lenovo ThinkPad X1 Carbon')">Buy Now</button>
+                <a href="javascript:history.back()"button class="btn btn-primary">Back </button></a>
+            </div>
+        </main>
+    <script>
+        function addToCart(productName) {
+            console.log(productName + " has been added to your cart!");
+            alert(productName + " has been added to your cart!");
+        }
+
+        function buyNow(productName) {
+            console.log("Redirecting to purchase page for " + productName);
+            alert("Redirecting to purchase page for " + productName);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Online Laptop Store</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #4460AA;
+      margin-bottom: 20px;
+    }
+
+    /* Contact Information */
+    .contact-info {
+      margin-bottom: 20px;
+      color: #555;
+      text-align: left;
+    }
+
+    .info-item {
+      margin-bottom: 10px;
+    }
+
+    .info-item strong {
+      color: #4460AA;
+    }
+
+    /* Form styles */
+    .field {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .field label {
+      display: block;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    /* Button styles */
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4460AA;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #354a8e;
+    }
+
+    .custom-btn {
+      background-color: #007bff;
+      /* Primary blue */
+      color: #ffffff;
+      /* White text */
+      padding: 10px 20px;
+      /* Padding */
+      border-radius: 5px;
+      /* Rounded corners */
+      text-decoration: none;
+      /* Remove underline */
+      display: inline-block;
+      /* Inline-block for padding */
+      transition: background-color 0.3s ease;
+      /* Smooth hover effect */
+    }
+
+    .custom-btn:hover {
+      background-color: #0056b3;
+      /* Darker blue on hover */
+      color: #ffffff;
+      /* White text on hover */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <div class="info-item">
+        <strong>Address:</strong>
+        <p>5th Tech Street, Laptop City, 45678</p>
+      </div>
+      <div class="info-item">
+        <strong>Phone:</strong>
+        <p>91+ 6369479748</p>
+      </div>
+      <div class="info-item">
+        <strong>Email:</strong>
+        <p>arasan7102003@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form id="form">
+      <div class="field">
+        <label for="to_name">to_name</label>
+        <input type="text" name="to_name" id="to_name">
+      </div>
+      <div class="field">
+        <label for="from_name">from_name</label>
+        <input type="text" name="from_name" id="from_name">
+      </div>
+      <div class="field">
+        <label for="message">message</label>
+        <input type="text" name="message" id="message">
+      </div>
+      <div class="field">
+        <label for="Subject">Subject</label>
+        <input type="text" name="Subject" id="Subject">
+      </div>
+
+      <input type="submit" id="button" value="Send Email">
+      <a href="javascript:history.back()" class="btn btn-primary custom-btn">Back</a>
+
+    </form>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+      emailjs.init('XQjhmRfpJJmFah9t_')
+    </script>
+    <script>
+      const btn = document.getElementById('button');
+
+      document.getElementById('form')
+        .addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          btn.value = 'Sending...';
+
+          const serviceID = 'default_service';
+          const templateID = 'template_itehq8j';
+
+          emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+              btn.value = 'Send Email';
+              alert('Sent!');
+            }, (err) => {
+              btn.value = 'Send Email';
+              alert(JSON.stringify(err));
+            });
+        });
+    </script>
+  </div>
+  </div>
+</body>
+
+</html>

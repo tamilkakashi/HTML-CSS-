@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Laptop Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="properties/style/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Our Laptop Collection</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Main Content Area -->
+        <main>
+            <h2>Featured Products</h2>
+            <div class="product">
+                <img src="properties/image/p1.avif" alt="Laptop 1">
+                <h3>Dell XPS 13</h3>
+                <p>Price: ₹1,55,290.00</p>
+                <p>Lightweight and powerful, perfect for professionals on the go.</p>
+                <button class="btn btn-success" onclick="addToCart('Dell XPS 13')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="buyNow('Dell XPS 13')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="properties/image/p2.avif" alt="Laptop 2">
+                <h3>HP Spectre x360</h3>
+                <p>Price: ₹165,999 </p>
+                <p>A versatile 2-in-1 laptop with a stunning design and performance.</p>
+                <button class="btn btn-success" onclick="addToCart('HP Spectre x360')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="buyNow('HP Spectre x360')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="properties/image/p3.jpg" alt="Laptop 3">
+                <h3>MacBook Air M1</h3>
+                <p>Price: ₹73,990</p>
+                <p>Exceptional battery life and performance in a sleek design.</p>
+                <button class="btn btn-success" onclick="addToCart('MacBook Air M1')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="buyNow('MacBook Air M1')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="properties/image/p4.jpg" alt="Laptop 4">
+                <h3>Acer Aspire 5</h3>
+                <p>Price: ₹55,900</p>
+                <p>Budget-friendly option with solid performance for everyday tasks.</p>
+                <button class="btn btn-success" onclick="addToCart('Acer Aspire 5')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="buyNow('Acer Aspire 5')">Buy Now</button>
+            </div>
+
+            <div class="product">
+                <img src="properties/image/p5.avif" alt="Laptop 5">
+                <h3>Lenovo ThinkPad X1 Carbon</h3>
+                <p>Price: ₹1,54,761</p>
+                <p>Durable and powerful, ideal for business professionals.</p>
+                <button class="btn btn-success" onclick="addToCart('Lenovo ThinkPad X1 Carbon')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="buyNow('Lenovo ThinkPad X1 Carbon')">Buy Now</button>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Premium Laptops Store &bull; All rights reserved &bull; Contact us: info@premiumlaptops.com</p>
+    </footer>
+    <script>
+        function addToCart(productName) {
+            console.log(productName + " has been added to your cart!");
+            alert(productName + " has been added to your cart!");
+        }
+
+        function buyNow(productName) {
+            console.log("Redirecting to purchase page for " + productName);
+            alert("Redirecting to purchase page for " + productName);
+        }
+    </script>
+</body>
+</html>

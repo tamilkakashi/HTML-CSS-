@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
+}
+
+header {
+    background: linear-gradient(to right, #81C784, #4CAF50);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar-left,
+.sidebar-right {
+    width: 20%;
+    padding: 20px;
+    background: linear-gradient(to right, #ffaa00, #ff8c8c);
+}
+
+.sidebar-left h2,
+.sidebar-right h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+/* CSS for a more attractive left sidebar */
+.sidebar-left {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.sidebar-left h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000000; /* Primary color for header */
+}
+
+.sidebar-left ul {
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0;
+}
+
+.sidebar-left li {
+    margin-bottom: 10px; /* Space between each item */
+}
+
+.sidebar-left a {
+    text-decoration: none;
+    color: #343a40; /* Darker color for links */
+    font-weight: 500;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-left a:hover {
+    background-color: #007bff; /* Highlight background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* main.css */
+
+.sidebar-right .btn {
+    margin-top: 20px;
+    margin-bottom: 25px; /* Adjust the spacing as needed */
+}
+
+
+main {
+    width: 60%;
+    padding: 20px;
+}
+
+footer {
+    background: linear-gradient(to right, #81C784, #4CAF50);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 10px 10px;
+    width: 300px; /* Optional: Adjust image width */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #ffa4a4, #ffd000);
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar-left,
+    .sidebar-right,
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sidebar-left h2,
+    .sidebar-right h2 {
+        font-size: 1.2em;
+    }
+
+    .float-right {
+        float: none;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
